@@ -4,30 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Actividad Graficas</title>
+        <!-- CND de tailwindcss -->
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
         <!-- CDN de las graficas -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body class="bg-zinc-100">
 
-        <div class="mt-5 ml-20">
-            <h1 class="text-3xl">Dashboard</h1>
-            <h2 class="text-xl text-gray-500">Bienvenido de nuevo, admin.</h2>
-        </div>
-
-        <div class="flex justify-center text-lg">
-            <!-- Gráfica de línea -->
-            <div class="bg-white m-5 px-2 py-4 shadow-sm rounded-xl">
-                <h2 class="m-3">Crecimiento de Usuarios</h2>
-                <div class="m-2 w-full max-w-xl h-80">
-                    <canvas id="lineChart"></canvas>
-                </div>
+        <div class="grid grid-cols-2">
+            <!-- Titulo, Dashboard y bienvenida -->
+            <div>
+                <h1 class="text-3xl">Dashboard</h1>
+                <h2 class="text-xl text-gray-500">Bienvenido de nuevo, admin.</h2>
             </div>
-            <!-- Gráfica de barras -->
-            <div class="bg-white m-5 px-2 py-4 shadow-sm rounded-xl">
-                <h2 class="m-3">Ingresos Mensuales</h2>
-                <div class="m-2 w-full max-w-xl h-80">
-                    <canvas id="barChart"></canvas>
+
+            <!-- Usuarios totales, Ingresos, Sesiones activas y Tasa de Conversion -->
+            <div class="flex col-span-2 justify-around bg-red-500">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+
+            <!-- Div que almacena las 2 graficas -->
+            <div class="flex justify-center text-lg col-span-2">
+                <!-- Gráfica de línea -->
+                <div class="bg-white m-5 px-2 py-4 shadow-sm rounded-xl">
+                    <h2 class="m-3">Crecimiento de Usuarios</h2>
+                    <div class="m-2 w-full max-w-xl h-80">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                <!-- Gráfica de barras -->
+                <div class="bg-white m-5 px-2 py-4 shadow-sm rounded-xl">
+                    <h2 class="m-3">Ingresos Mensuales</h2>
+                    <div class="m-2 w-full max-w-xl h-80">
+                        <canvas id="barChart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
