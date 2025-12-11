@@ -11,39 +11,70 @@
     </head>
     <body class="bg-zinc-100">
 
-        <div class="grid grid-cols-2">
+        <div class="px-16 py-10">
+
             <!-- Titulo, Dashboard y bienvenida -->
             <div>
-                <h1 class="text-3xl">Dashboard</h1>
+                <h1 class="text-3xl font-bold text-gray-800">Dashboard</h1>
                 <h2 class="text-xl text-gray-500">Bienvenido de nuevo, admin.</h2>
             </div>
 
             <!-- Usuarios totales, Ingresos, Sesiones activas y Tasa de Conversion -->
-            <div class="flex col-span-2 justify-around bg-red-500">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
+            <div class="mt-10 grid grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-zinc-600 text-lg">Usuarios Totales</p>
+                        <p class="bg-green-200 text-green-950 rounded-xl text-sm px-3 py-0.1 content-center">+12%</p>
+                    </div>
+                    <p class="text-5xl text-gray-800 font-bold">8,249</p>
+                    <p class="text-zinc-700 text-lg">Aumentó 1,093 esta semana</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-zinc-600 text-lg">Ingresos</p>
+                        <p class="bg-green-200 text-green-950 rounded-xl text-sm px-3 py-0.1 content-center">+8%</p>
+                    </div>
+                    <p class="text-5xl text-gray-800 font-bold">$24,780</p>
+                    <p class="text-zinc-700 text-lg">$2,567 más que el pasado</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-zinc-600 text-lg">Sesiones activas</p>
+                        <p class="bg-red-200 text-rose-950 rounded-xl text-sm px-3 py-0.1 content-center">-3%</p>
+                    </div>
+                    <p class="text-5xl text-gray-800 font-bold">1,342</p>
+                    <p class="text-zinc-700 text-lg">42 menos que ayer</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-zinc-600 text-lg">Tasa de Conversión</p>
+                        <p class="bg-green-200 text-green-950 rounded-xl text-sm px-3 py-0.1 content-center">+5%</p>
+                    </div>
+                    <p class="text-5xl text-gray-800 font-bold">24.8%</p>
+                    <p class="text-zinc-700 text-lg">1.2% más que el promedio</p>
+                </div>
             </div>
 
             <!-- Div que almacena las 2 graficas -->
-            <div class="flex justify-center text-lg col-span-2">
+            <div class="mt-8 grid grid-cols-2 gap-6 text-lg">
                 <!-- Gráfica de línea -->
-                <div class="bg-white m-5 px-2 py-4 shadow-sm rounded-xl">
-                    <h2 class="m-3">Crecimiento de Usuarios</h2>
-                    <div class="m-2 w-full max-w-xl h-80">
+                <div class="bg-white shadow-md rounded-xl p-6">
+                    <h2 class="mb-4 font-semibold text-gray-800">Crecimiento de Usuarios</h2>
+                    <div class="h-80">
                         <canvas id="lineChart"></canvas>
                     </div>
                 </div>
                 <!-- Gráfica de barras -->
-                <div class="bg-white m-5 px-2 py-4 shadow-sm rounded-xl">
-                    <h2 class="m-3">Ingresos Mensuales</h2>
-                    <div class="m-2 w-full max-w-xl h-80">
+                <div class="bg-white shadow-md rounded-xl p-6">
+                    <h2 class="mb-4 font-semibold text-gray-800">Ingresos Mensuales</h2>
+                    <div class="h-80">
                         <canvas id="barChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="pointer-events-none absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-zinc-300/80 to-transparent"></div>
+
 
         <!-- Grafica de la linea -->
         <script>
